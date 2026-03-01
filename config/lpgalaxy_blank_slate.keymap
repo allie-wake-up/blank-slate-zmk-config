@@ -151,22 +151,22 @@
 
 /* FN
  * ,-----------------------------------------------------------------------------------.
- * | PSCR |  BT0 |  BT1 |  BT2 |  BT3 |  BT4 |   Y  | Home | End  | PgUp |PgDown|BT CLR|
+ * | PSCR |  BT0 |  BT1 |  BT2 |  BT3 |  BT4 |   Y  | Home | End  | PgUp |PgDown| DEL  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | GUI  |   A  |   S  |   D  |   F  |   G  | Left | Down |  Up  |Right |      |  "   |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | Ctrl | Alt  |      |      |Lower |    Space    |Raise | Left | Down |  Up  |Right |
+ * |BT CLR| Alt  |      |      |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
         sym_layer {
             label = "FN";
             bindings = <
-&kp PSCRN  &bt BT(0)  &bt BT(1)  &bt BT(2)   &bt BT(3)       &bt BT(4)    &trans     &kp HOME       &kp END     &kp PG_UP  &kp PG_DN  &kp DEL
-&trans     &trans     &trans     &trans      &trans          &trans       &kp LEFT       &kp DOWN    &kp UP     &kp RIGHT  &trans     &trans
-&trans     &trans     &trans     &trans      &trans          &trans       &trans     &trans         &trans      &trans     &trans     &trans
-&bt BT_CLR &trans     &trans     &trans      &trans                 &trans           &trans         &trans      &trans     &trans     &trans
+&kp PSCRN      &bt BT_SEL(0)  &bt BT_SEL(1)  &bt BT_SEL(2)  &bt BT_SEL(3) &bt BT_SEL(4) &trans     &kp HOME   &kp END    &kp PG_UP  &kp PG_DN  &kp DEL
+&trans         &trans         &trans         &trans         &trans        &trans        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
+&trans         &trans         &trans         &trans         &trans        &trans        &trans     &trans     &trans     &trans     &trans     &trans
+&bt BT_CLR_ALL &trans         &trans         &trans         &trans                &trans           &trans     &trans     &trans     &trans     &trans     
             >;
         };
     };
